@@ -1,7 +1,35 @@
 # MLOps Nginx Exam Project
 
 ## Project Structure
-mlops-nginx-exam-2/ ├── deployments/ │ └── nginx/ │ ├── certs/ │ │ ├── nginx.crt # SSL certificate │ │ └── nginx.key # SSL private key │ ├── .htpasswd # Basic auth credentials │ ├── Dockerfile # Nginx Docker image │ └── nginx.conf # Nginx configuration │ └── prometheus/ │ └── prometheus.yml # Prometheus configuration ├── model/ │ └── model.joblib # Trained ML model ├── src/ │ └── api/ │ ├── v1/ │ │ ├── Dockerfile # api-v1 Docker image │ │ └── main.py # Standard API │ └── v2/ │ ├── Dockerfile # api-v2 Docker image │ ├── main.py # Debug API │ └── requirements.txt # Python dependencies ├── tests/ │ └── run_tests.sh # Test script ├── docker-compose.yml # Docker Compose configuration ├── Makefile # Makefile for common commands └── README.md # This file
+```
+mlops-nginx-exam-2/
+├── deployments/
+│   ├── nginx/
+│   │   ├── certs/
+│   │   │   ├── nginx.crt        # SSL certificate
+│   │   │   └── nginx.key        # SSL private key
+│   │   ├── .htpasswd            # Basic auth credentials
+│   │   ├── Dockerfile           # Nginx Docker image
+│   │   └── nginx.conf           # Nginx configuration
+│   └── prometheus/
+│       └── prometheus.yml       # Prometheus configuration
+├── model/
+│   └── model.joblib             # Trained ML model
+├── src/
+│   └── api/
+│       ├── v1/
+│       │   ├── Dockerfile       # api-v1 Docker image
+│       │   └── main.py          # Standard API
+│       └── v2/
+│           ├── Dockerfile       # api-v2 Docker image
+│           ├── main.py          # Debug API
+│           └── requirements.txt # Python dependencies
+├── tests/
+│   └── run_tests.sh             # Test script
+├── docker-compose.yml           # Docker Compose configuration
+├── Makefile                     # Makefile for common commands
+└── README.md                    # This file
+```
 
 
 ---
@@ -135,6 +163,7 @@ curl -X POST "https://localhost/predict" \
 
 
 ## Monitoring
-Service	URL	Credentials
-Grafana	http://localhost:3000	admin/admin
-Prometheus	http://prometheus:9090	-
+| Service | URL | Credentials |
+|---------|-----|-------------|
+| Grafana | http://localhost:3000 | admin/admin |
+| Prometheus | http://localhost:9090 | - |
